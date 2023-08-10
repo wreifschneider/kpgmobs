@@ -1,0 +1,41 @@
+mobs:register_mob("kpgmobs:medved", {
+	type = "animal",
+	hp_min= 10,
+	hp_max = 20,
+	collisionbox = {-0.4, -0.01, -0.4, 0.4, 1, 0.4},
+	damage = 5,
+	attack_type = "dogfight",
+	passive = false,
+	textures = {
+		{"mobs_medved.png"},
+	},
+	visual = "mesh",
+	mesh = "mobs_medved.x",
+	makes_footstep_sound = true,
+	view_range = 7,
+	fear_height = 2,
+	walk_velocity = 1,
+	run_velocity = 2,
+	damage = 10,
+	armor = 200,
+	attack_type = "dogfight",
+	drops = {
+		{name = "mobs:meat_raw",
+		chance = 1,
+		min = 5,
+		max = 10,},
+	},
+	drawtype = "front",
+	water_damage = 1,
+	lava_damage = 5,
+	light_damage = 0,
+	animation = {
+		speed_normal = 15,		speed_run = 15,
+		stand_start = 0,		stand_end = 30,
+		walk_start = 35,		walk_end = 65,
+		run_start = 105,		run_end = 135,
+		punch_start = 70,		punch_end = 100,
+	},
+})
+mobs:register_spawn("kpgmobs:medved", {"default:dirt_with_grass"}, 20, 10, 15000, 1, 31000) --20, 0, 11000, 3, 31000) --"default:dirt","default:desert_sand"
+mobs:register_egg("kpgmobs:medved", "Bear", "wool_brown.png", 1)
